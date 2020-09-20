@@ -9,11 +9,11 @@ for (var i = 0; i < 10; i++){
      
      }
 
-console.log(vector)
+// console.log(vector)
 
 
 
-var vector1 = [ 8, 27, 37, 34, 22, 19, 30, 26, 11, 24]
+var vector1 = [8, 27, 37, 34, 22, 19, 30, 26, 11, 24]
 var vector2 = [32, 47, 35, 31, 23, 21, 27, 18, 47, 24]
 var vector3 = [17, 27,  9, 38, 33, 34, 47, 47, 38, 20]
 var vector4 = [31, 8, 11, 38,  4, 9, 2, 23, 25, 10]
@@ -40,30 +40,41 @@ var vector20 = [42, 30, 34, 33, 21, 25, 1, 48, 4, 5]
 
 var vectores1 = [vector1,vector2,vector3,vector4,vector5,vector6,vector7,vector8,vector9,vector10]
 var vectores2 = [vector11,vector12,vector13,vector14,vector15,vector16,vector17,vector18,vector19,vector20]
-var vectores3 = new Array; 
-for (var i = 0;i <= vectores1.length; i++) {
-   for (j=0;j<=vector1.length;i++) {
-       console.log(vectores(i));
-}
-}
 
-var nuevoArray = new Array(10);
-for(var i=0; i<10; i++) {
-    nuevoArray[i] = new Array(10);
-}
-for (var i = 0; i<vectores1.length; i++) {
-    vectores1[i] = new Array();
-}
-var x = new Array(10);
+var vectorTotal = [];
 
-for (var i = 0; i < x.length; i++) {
-    for (var i = 0; i < 10; i++){
+for (i = 0; i < vectores1.length; i++) {
+    vectorTotal[i] = vectores1[i] + vectores2[i];
+}
+console.log(vectorTotal);
+
+
+
+
+
+
+
+
+
+// var nuevoArray = new Array(10);
+// for(var i=0; i<10; i++) {
+//     nuevoArray[i] = new Array(10);
+// }
+// for (var i = 0; i<vectores1.length; i++) {
+//     vectores1[i] = new Array();
+// }
+// var x = new Array(10);
+
+// for (var i = 0; i < x.length; i++) {
+//     for (var i = 0; i < 10; i++){
      
-         x.push(Math.round(Math.random()*50));
+//          x.push(Math.round(Math.random()*50));
              
-              }
+//               }
         
-  x[i] = new Array(3);
-}
+//   x[i] = new Array(3);
+// }
 
-console.log(x);
+// console.log(x);
+
+

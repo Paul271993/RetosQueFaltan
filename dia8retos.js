@@ -1,42 +1,68 @@
-module.export = class Persona {
-    constructor(altura, pesoKg, colorOjos, anyoNacimiento, anyoActual, colorPelo) {
-        this.altura = altura;
-        this.pesoKg = pesoKg;
-        this.colorOjos = colorOjos;
-        this.anyoNacimiento = anyoNacimiento;
-        this.anyoActual = anyoActual;
-        this.colorPelo = colorPelo;
-    }
-    mostrarTodos() {
-        var atributos = 
-        "\n" + "altura:" +  "\n" + this.altura + 
-        "\n" + "peso:" + "\n" + this.pesoKg + 
-        "\n" + "colorOjos:" + "\n" + this.colorOjos + 
-        "\n" + "anyoNacimiento:" + "\n" + this.anyoNacimiento + 
-        "\n" + "anyoActual:" + "\n" + this.anyoActual + 
-        "\n" + "colorPelo:" + "\n" + this.colorPelo;
-        return atributos;
+// RETO 1
+
+var x = ("Hola")
+saludoArrow = (x) => {console.log(x)}
+saludoArrow (x);
+   if (x == null){
+       console.log("No tiene parametro")
+   }
+
+// RETO 2
+
+multiply = (x,y) => {return x*y}
+
+// RETO 3   
+
+let arr = [6,34,6,2,54];
+    suma = 0;
+    arr.forEach (function(numero){
+        suma += numero;
+    });
+    console.log(suma);
+
+    let array = [2,3,4];
+
+esteArray = (arr) => {
+    if(!arr) return 0;
+    if (Array.isArray(arr)) {
+        let x = 0;
+        for (let i = 0; i < arr.length; i++) {
+            x += arr[i];
+        }
+        return x;
+    } else {
+        return ("No has introducido un array como parámetro de entrada");
     }
 }
-var persona1 = new Persona(180, 80, "azul", 1993, 2020, "negro")
-// console.log(persona1.mostrarTodos())
-var persona2 = new Persona(170, 50, "negro", 1989, 2020, "castaño")
-var persona3 = new Persona(160, 67, "marron", 2000, 2020, "rojo")
+console.log(esteArray(array));
+console.log(esteArray());
+
+//RETO 5
+
+class Password {
+    length;
+    password;
 
 
-var arrayPersonas = [persona1,persona2,persona3];
-
-class Agenda {
-    constructor (arrayPersonas){
-    this.arrayPersonas = arrayPersonas;
-     } 
-
+    constructor(length, password){
+        this.length = length;
+        this.password = password;
+        
     }
-function printPersonas(){
-    for (let i=0; i<=this.arrayPersonas.length; i++)
-    var persona1 = this.arrayPersonas[i].atributos;
+
+    
 }
-console.log(arrayPersonas)
+
+//RETO 5, Punto 2 => Generar una contraseña aleatoria:
+function generatePass(length)
+{
+  var caracteres = "abcdefghijkmnpqrtuvwxyzABCDEFGHIJKLMNPQRTUVWXYZ12346789";
+  var password = "";
+  for (i=0; i<length; i++) password += caracteres.charAt(Math.floor(Math.random()*caracteres.length));
+  return password;
+}
+
+console.log(generatePass(8))
 
 
 
